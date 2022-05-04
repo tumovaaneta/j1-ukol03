@@ -67,9 +67,9 @@ V metodě `main(String... args)` v `HlavniProgram` vytvořte model **svého** po
 💡 Poznámka: Číslo, které končí na `L` znamená, že jde o číslo typu `long` a nikoliv `int`. Rozdíl je v rozsahu. `int` pojme čísla od `-2 147 483 648` do
 `+2 147 483 647` (tj. něco přes dvě miliardy), což není dostatečné pro kapacitu harddisku ani paměti ani pro rychlosti současných procesorů. Proto
 použijte `long`, který zvládne čísla od `-9 223 372 036 854 775 808` do `+9 223 372 036 854 775 807` (tj. přes devět trilionů).
-To už je dostatečné na uchování libovolné současné kapacity harddisku.
+To už je dostatečné na uchování údajů o současných počítačích.
 
-Aby byl zápis čísel ve zdorjovém kódu přehlednější, umožňuje Java vkládat do čísel podtržítka (jako oddělovač tisíců – tam, kde my běžně píšeme mezery).
+Aby byl zápis čísel ve zdrojovém kódu přehlednější, umožňuje Java vkládat do čísel podtržítka (jako oddělovač tisíců – tam, kde my běžně píšeme mezery).
 
 Příklad metody `main` Filipova počítače:
 
