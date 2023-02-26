@@ -1,4 +1,4 @@
-# Úkol 3 (lekce 5) – Třídy a objekty – počítač
+# Úkol 3 – Třídy a objekty – počítač
 
 Každou část úkolu vytvořte jako samostatný commit (důležité je to spíš pro vás – pokud na to zapoemenete a budete mít vše najednou, není potřeba commity
 po částech vyvářet dodatečně). Pokud zjistíte dodatečně v kódu nějakou chybu, nevadí, commitněte opravu jako další commit. Pokud si chcete práci průběžně
@@ -65,7 +65,7 @@ V metodě `main(String... args)` v `HlavniProgram` vytvořte model **svého** po
 `toString()` u všech tříd a že počítač jde zapnout, jen pokud je správně sestavený.
 
 💡 Poznámka: Číslo, které končí na `L` znamená, že jde o číslo typu `long` a nikoliv `int`. Rozdíl je v rozsahu. `int` pojme čísla od `-2 147 483 648` do
-`+2 147 483 647` (tj. něco přes dvě miliardy), což není dostatečné pro kapacitu harddisku ani paměti ani pro rychlosti současných procesorů. Proto
+`+2 147 483 647` (tj. něco přes dvě miliardy), což není dostatečné pro kapacitu harddisku, paměti ani pro rychlosti současných procesorů. Proto
 použijte `long`, který zvládne čísla od `-9 223 372 036 854 775 808` do `+9 223 372 036 854 775 807` (tj. přes devět trilionů).
 To už je dostatečné na uchování údajů o současných počítačích.
 
