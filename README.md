@@ -39,7 +39,7 @@ Vytvořte veřejné třídy `Disk`, `Pamet`, `Procesor`, `Pocitac` v balíčku `
 
 ### Pocitac
 * `boolean` jeZapnuty (toto bude pouze field, bez getteru a setteru)
-* `Procesor` cpu (budeme se tvářit, že počítač má jen jeden procesor s jendím jádrem)
+* `Procesor` cpu (budeme se tvářit, že počítač má jen jeden procesor s jedním jádrem)
 * `Pamet` ram
 * `Disk` pevnyDisk
 
@@ -58,7 +58,7 @@ Počítač není možno zapnout dvakrát. Při takovém pokusu vypište chybovou
 Počítač je možno vypnout vícekrát, ale opakované volání metody `vypniSe()` se ignoruje.
 
 Aby bylo možné počítač zapnout, musí mít procesor, paměť a disk. Při pokusu o zapnutí počítače tedy musíte zkontrolovat, zda se daná část v počítači nachází.
-Poku dnějaké chybí (např. `ram == null`), metoda pro zapnutí vypíše do konzle chybovou hlášku a metoda se ukončí (počítač se nezapne).
+Pokud nějaké chybí (např. `ram == null`), metoda pro zapnutí vypíše do konzle chybovou hlášku a metoda se ukončí (počítač se nezapne).
 
 
 V metodě `main(String... args)` v `HlavniProgram` vytvořte model **svého** počítače a vyzkoušejte, že vám fungují správně metody
