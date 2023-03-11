@@ -4,6 +4,18 @@ public class Disk {
     private long kapacita;
     private long vyuziteMisto;
 
+    public long vratVolneMisto() {
+        return kapacita - vyuziteMisto;
+    }
+
+    public void ulozSoubor(long velikost) {
+        vyuziteMisto = vyuziteMisto + velikost;
+    }
+
+    public void vymazSoubor(long velikost) {
+        vyuziteMisto = vyuziteMisto - velikost;
+    }
+
     public long getKapacita() {
         return kapacita;
     }
@@ -27,4 +39,6 @@ public class Disk {
                 ", vyuziteMisto=" + vyuziteMisto +
                 '}';
     }
+
+
 }

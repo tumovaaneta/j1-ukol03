@@ -77,6 +77,29 @@ public class Pocitac {
         this.pevnyDisk = pevnyDisk;
     }
 
+
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (jeZapnuty){
+            if (pevnyDisk.vratVolneMisto() > velikost) {
+                pevnyDisk.ulozSoubor(velikost);
+            }else {
+                System.err.println("Je nedostatek místa na pevném disku.");
+            }
+        }
+
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        if (!jeZapnuty) {
+            return;
+        }
+        if (pevnyDisk.getVyuziteMisto() > velikost) {
+            pevnyDisk.vymazSoubor(velikost);
+        } else {
+            System.err.println("Kapacita nemůže být pod 0.");
+        }
+    }
+
     @Override
     public String toString() {
         return "Pocitac{" +

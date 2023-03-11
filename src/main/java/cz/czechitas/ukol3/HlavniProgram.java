@@ -37,7 +37,13 @@ public class HlavniProgram {
         mujPocitac.zapniSe();
         mujPocitac.zapniSe();
 
-
+        mujPocitac.vytvorSouborOVelikosti(200_000_000_000L);
+        System.out.println(mujPocitac.toString());
+        mujPocitac.vytvorSouborOVelikosti(200_000_000_000L);
+        System.out.println(mujPocitac.toString());
+        mujPocitac.vymazSouboryOVelikosti(200_000_000_000L);
+        System.out.println(mujPocitac.toString());
+        mujPocitac.vymazSouboryOVelikosti(900_000_000_000L);
 
 
 
