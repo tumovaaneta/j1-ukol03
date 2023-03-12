@@ -1,10 +1,11 @@
 package cz.czechitas.ukol3.model;
 
 public class Pocitac {
-    boolean jeZapnuty;
-    Procesor cpu;
-    Pamet ram;
-    Disk pevnyDisk;
+    private boolean jeZapnuty;
+    private Procesor cpu;
+    private Pamet ram;
+    private Disk pevnyDisk;
+    private Disk druhyDisk;
 
     public boolean jeZapnuty() {
         return jeZapnuty;
@@ -28,6 +29,31 @@ public class Pocitac {
         }
     }
 
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (jeZapnuty) {
+            if (pevnyDisk.vratVolneMisto() >= velikost) {
+                pevnyDisk.ulozSoubor(velikost);
+            } else if (druhyDisk.vratVolneMisto() >= velikost) {
+                druhyDisk.ulozSoubor(velikost);
+            } else {
+                System.err.println("Je nedostatek místa na obouch diskách.");
+            }
+        }
+
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        if (!jeZapnuty) {
+            return;
+        }
+        if (pevnyDisk.getVyuziteMisto() >= velikost) {
+            pevnyDisk.vymazSoubor(velikost);
+        } else if (druhyDisk.getVyuziteMisto() >= velikost) {
+            druhyDisk.vymazSoubor(velikost);
+        } else {
+            System.err.println("Kapacita nemůže být pod 0.");
+        }
+    }
 
     public boolean isJeZapnuty() {
         return jeZapnuty;
@@ -78,26 +104,12 @@ public class Pocitac {
     }
 
 
-    public void vytvorSouborOVelikosti(long velikost) {
-        if (jeZapnuty){
-            if (pevnyDisk.vratVolneMisto() > velikost) {
-                pevnyDisk.ulozSoubor(velikost);
-            }else {
-                System.err.println("Je nedostatek místa na pevném disku.");
-            }
-        }
-
+    public Disk getDruhyDisk() {
+        return druhyDisk;
     }
 
-    public void vymazSouboryOVelikosti(long velikost) {
-        if (!jeZapnuty) {
-            return;
-        }
-        if (pevnyDisk.getVyuziteMisto() > velikost) {
-            pevnyDisk.vymazSoubor(velikost);
-        } else {
-            System.err.println("Kapacita nemůže být pod 0.");
-        }
+    public void setDruhyDisk(Disk druhyDisk) {
+        this.druhyDisk = druhyDisk;
     }
 
     @Override
@@ -107,6 +119,7 @@ public class Pocitac {
                 ", cpu=" + cpu +
                 ", ram=" + ram +
                 ", pevnyDisk=" + pevnyDisk +
+                ", druhyDisk=" + druhyDisk +
                 '}';
     }
 }
